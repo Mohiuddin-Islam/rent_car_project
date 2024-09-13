@@ -1,0 +1,8 @@
+VehicleBooking- Car Rental
+
+Client User: mohi@gmail.com
+Password: demo123
+
+Admin User: admin@gmail.com
+Password: admin123
+
