@@ -9,7 +9,7 @@
   <!-- Navigation -->
  <?php include("vendor/inc/nav.php");?>
   <!-- Page Content -->
-  <div class="container">
+  <div class="container p-4 m-4 offset-md-5 col-lg-10">
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">Contact Us

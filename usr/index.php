@@ -28,8 +28,8 @@
         $mysqli->query($log);
         if($log)
         {
-         header("location:user-dashboard.php");
-         }
+        header("location:user-dashboard.php");
+        }
         }
       else
       {

@@ -9,7 +9,7 @@
   <?php include("vendor/inc/nav.php");?>
 
   <!-- Page Content -->
-  <div class="container">
+  <div class="container p-4 m-4 offset-md-5 col-lg-11">
 
     <!-- Page Heading/Breadcrumbs -->
     <h1 class="mt-4 mb-3">About
@@ -25,7 +25,7 @@
     <!-- Intro Content -->
     <div class="row">
       <div class="col-lg-6">
-        <img class="img-fluid rounded mb-4" src="vendor/img/audi1.jpg" alt="">
+        <img class="img-fluid rounded mb-4" src="vendor/img/1audiq8.jpg" alt="">
       </div>
       <div class="col-lg-6">
         <h2>About Us</h2>
@@ -47,7 +47,7 @@
     <!-- /.row -->
   </div>
   <!-- /.container -->
-
+  
   <!-- Footer -->
 <?php include("vendor/inc/footer.php");?>
 

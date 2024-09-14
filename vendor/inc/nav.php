@@ -5,30 +5,30 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto" >
-          <li class="nav-item">
-            <a class="nav-link" href="about.php">About</a>
+        <ul class="navbar-nav ml-auto " >
+        <li class="nav-item">
+          <h5> <a class="nav-link" href="about.php">About</a></h5>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="services.php">Services</a>
+            <h5><a class="nav-link" href="services.php">Services</a></h5>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.php">Contact</a>
-          </li>
-
-          <li class="nav-item">
-            <a class="nav-link" href="gallery.php">Gallery</a>
+            <h5><a class="nav-link" href="contact.php">Contact</a></h5>
           </li>
 
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <li class="nav-item">
+          <h5> <a class="nav-link" href="gallery.php">Gallery</a></h5>
+          </li>
+
+          <h5><li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownBlog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Login Panel
             </a>
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownBlog">
               <a class="dropdown-item" href="admin/">Admin Login</a>
               <a class="dropdown-item" href="usr/">Client Login</a>
             </div>
-          </li>
+          </li></h5>
         </ul>
       </div>
     </div>
