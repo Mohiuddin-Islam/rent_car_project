@@ -114,6 +114,8 @@
                 <option>Hybrid</option>
                 <option>Primeo</option>
                 <option>Corolla</option>
+                <option>CR-V</option>
+                <option>Petrol</option>
 
               </select>
             </div>

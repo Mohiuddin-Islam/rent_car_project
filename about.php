@@ -40,7 +40,7 @@
             assigned a tasks at a time, also keep track of all financial reports and expenses incurred in the
             organization by ensuring that all payments are made through credit/debit card or pay bill. The
             system will be able to have details of all the customers who has booked vehicle and also view
-            the vehicles with tasks at hand and those without.
+            the vehicles with tasks at hand and those without. For efficiency and cost reasons, most car rentals offer online reservations coupled with self-service car pick-up. To be legally compliant as well as to prevent financial losses due to car theft, stringent driver proofing is absolutely necessary. In other words, they must ensure that the person picking up the car is the right person and in possession of the driver’s license. Bio ID validates driver’s license ownership and prevents spoofing fraud with liveness detection. This way, self-service car rental or car sharing is convenient and secure!
         </p>
       </div>
     </div>

@@ -37,9 +37,9 @@
 
         </ol>
 
-       
-       <!--Bookings-->
-       <div class="card mb-3">
+      
+      <!--Bookings-->
+      <div class="card mb-3">
           <div class="card-header">
             <i class="fas fa-bus"></i>
             Available Vehicles</div>
@@ -96,7 +96,7 @@
       <!-- /.container-fluid -->
 
       <!-- Sticky Footer -->
-     <?php include("vendor/inc/footer.php");?>
+      <?php include("vendor/inc/footer.php");?>
 
     </div>
     <!-- /.content-wrapper -->
