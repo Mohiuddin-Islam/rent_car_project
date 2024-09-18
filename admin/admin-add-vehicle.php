@@ -106,16 +106,19 @@
             <div class="form-group">
               <label for="exampleFormControlSelect1">Vehicle Category</label>
               <select class="form-control" name="v_category" id="exampleFormControlSelect1">
-                <option>Bus</option>
+                <option>Primeo</option>
                 <option>Sedan</option>
                 <option>SUV</option>
-                <option>Van</option>
+                <option>AXS</option>
                 <option>Land Cruiser</option>
                 <option>Hybrid</option>
-                <option>Primeo</option>
+                <option>Harrier</option>
                 <option>Corolla</option>
                 <option>CR-V</option>
                 <option>Petrol</option>
+                <option>X-Pander</option>
+                <option>Rogue-SV</option>
+
 
               </select>
             </div>

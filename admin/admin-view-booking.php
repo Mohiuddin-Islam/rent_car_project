@@ -57,7 +57,7 @@
 
                   $res="SELECT * FROM tms_user where u_car_book_status = 'Approved' || u_car_book_status = 'Pending' "; //get all bookings
                   $sq= $mysqli->query($res) ;
-                 
+                
                   $cnt=1;
                   while($row=$sq->fetch_object())
                 {
@@ -80,7 +80,7 @@
           <div class="card-footer small text-muted">
             <?php
               date_default_timezone_set("Africa/Nairobi");
-              echo "The time is " . date("h:i:sa");
+              echo "The Time is " . date("h:i:sa");
             ?> 
         </div>
       </div>

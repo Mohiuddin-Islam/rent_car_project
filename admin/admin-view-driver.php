@@ -51,7 +51,7 @@
                 </thead>
                 <?php
 
-                    $res=$mysqli->query("SELECT * FROM tms_user ");//where u_category = 'Driver'  ORDER BY RAND() LIMIT 1000  "; 
+                    $res=$mysqli->query("SELECT * FROM tms_user where u_category = 'Driver'");//where u_category = 'Driver'  ORDER BY RAND() LIMIT 1000"; 
                     
                     $sn=1;
                     while($row=$res->fetch_object())
@@ -71,7 +71,7 @@
               </table>
             </div>
           </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          <div class="card-footer small text-muted">Updated Yesterday at 11:59 PM</div>
         </div>
       </div>
       <!-- /.container-fluid -->

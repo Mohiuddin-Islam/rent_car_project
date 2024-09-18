@@ -78,7 +78,7 @@
         <div class="card">
         <h2> Change Password</h2>
             <div class="card-body">
-               
+              
                 <form method ="post">                    
                     <div class="form-group">
                         <label for="exampleInputPassword1">Old Password</label>
@@ -100,7 +100,7 @@
         </div>
       </div>      
       <hr>
-     
+    
 
       <!-- Sticky Footer -->
       <?php include("vendor/inc/footer.php");?>

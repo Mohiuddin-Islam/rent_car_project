@@ -102,13 +102,13 @@
             <div class="form-group">
               <label for="exampleFormControlSelect1">Vehicle Category</label>
               <select class="form-control" name="v_category" id="exampleFormControlSelect1">
-                <option>Bus</option>
+                <option>AXS</option>
                 <option>Matatu</option>
                 <option>Nissan</option>
-                <option>Bus</option>
+                <option>Petroll</option>
                 <option>Sedan</option>
                 <option>SUV</option>
-                <option>Van</option>
+                <option>CR-V</option>
                 <option>Land Cruiser</option>
                 <option>Hybrid</option>
                 <option>Primeo</option>
@@ -139,7 +139,7 @@
           <?php }?>
         </div>
       </div>
-       
+      
       <hr>
      
 

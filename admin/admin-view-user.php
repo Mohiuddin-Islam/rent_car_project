@@ -53,7 +53,7 @@
 
                     $res="SELECT * FROM tms_user where u_category = 'User' "; 
                     $sq= $mysqli->query($res) ;
-                   
+                  
                     $cnt=1;
                     while($row=$sq->fetch_object())
                 {
@@ -72,7 +72,7 @@
               </table>
             </div>
           </div>
-          <div class="card-footer small text-muted">Updated yesterday at 11:59 PM</div>
+          <div class="card-footer small text-muted">Updated Yesterday at 11:59 PM</div>
         </div>
       </div>
       <!-- /.container-fluid -->

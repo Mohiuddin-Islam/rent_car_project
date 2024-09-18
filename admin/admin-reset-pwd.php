@@ -95,8 +95,8 @@
 
   <!-- Core plugin JavaScript-->
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-   <!--INject Sweet alert js-->
- <script src="vendor/js/swal.js"></script>
+  <!--INject Sweet alert js-->
+  <script src="vendor/js/swal.js"></script>
 
 </body>
 

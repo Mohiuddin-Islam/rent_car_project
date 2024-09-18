@@ -54,7 +54,7 @@
         <div class="card h-100">
           <h4 class="card-header">Why Us</h4>
           <div class="card-body">
-            <p class="card-text">We create accountability in the transport sector, enhance mobility and ease of accessing various transport modes</p>
+            <p class="card-text">We create accountability in the transport sector, enhance mobility and ease of accessing various transport modes. Finding a cheap car rental requires travelers to take advantage of search filters and pricing trends. Within your search, apply filters for your budgetary limits in the “total price” section of the filter list. Additionally, pay attention to the other filters, as they come with low-price limits for each. For example, in the Car type section, you’ll typically find that the low-price estimate listed for the economy car rentals is far less than the starting price for the premium car rentals.</p>
           </div>
           
         </div>
@@ -64,7 +64,7 @@
           <h4 class="card-header">Core Values</h4>
           <div class="card-body">
             <p class="card-text">
-              Excellence, Trust and Openness, Integrity, Take Responsibility, Customer Orientation             
+              Excellence, Trust and Openness, Integrity, Take Responsibility, Customer Orientation. Travelers will find several advantages to renting a car, including having an easy way to travel that's faster than public transportation and the ability to feel more like a local. This also comes in handy when you're in a place that doesn't have that many taxis or you plan on traveling a lot to the point where taxis would be too expensive or impractical. Planning your vacation itinerary is easier since your transportation is taken care of in advance, rather than having to factor in train lines or bus routes. Whether you're on a business trip or traveling with the whole family, you have a stress-free way to get from place to place.             
             </p>
           </div>
         </div>
@@ -79,7 +79,7 @@
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="vendor/img/landtoyota.jpg" alt="" height="200px"></a>
+          <a href="#"><img class="card-img-top" src="vendor/img/audi3.jpg" alt="" height="200px"></a>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">

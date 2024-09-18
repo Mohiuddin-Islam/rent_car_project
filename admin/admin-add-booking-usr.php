@@ -12,7 +12,7 @@
             extract($_POST);
             $query="UPDATE tms_user SET u_car_type='$u_car_type', u_car_bookdate='$u_car_bookdate', u_car_regno='$u_car_regno', u_car_book_status='$u_car_book_status' where u_id='$u_id'";
             $sql = $mysqli->query($query);
-           
+          
                 if($sql)
                 {
                     $succ = "User Booking Added";
@@ -120,9 +120,14 @@
             <div class="form-group">
               <label for="exampleFormControlSelect1">Vehicle Category</label>
               <select class="form-control" name="u_car_type" id="exampleFormControlSelect1">
-                <option>Bus</option>
+                <option>AXS</option>
                 <option>Matatu</option>
                 <option>Nissan</option>
+                <option>Hybrid</option>
+                <option>Corolla</option>
+                <option>Petrol</option>
+                <option>Harrier</option>
+                <option>X-Pander</option>
 
               </select>
             </div>

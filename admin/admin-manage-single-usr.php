@@ -89,19 +89,19 @@
           <form method ="POST"> 
             <div class="form-group">
                 <label for="exampleInputEmail1">First Name</label>
-                <input type="text" value="<?php echo $row->u_fname;?>" required class="form-control" id="exampleInputEmail1" name="u_fname">
+                <input type="text" placeholder="Enter First Name" value="<?php echo $row->u_fname;?>" required class="form-control" id="exampleInputEmail1" name="u_fname">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Last Name</label>
-                <input type="text" class="form-control" value="<?php echo $row->u_lname;?>" id="exampleInputEmail1" name="u_lname">
+                <input type="text" placeholder="Enter Last Name" class="form-control" value="<?php echo $row->u_lname;?>" id="exampleInputEmail1" name="u_lname">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Contact</label>
-                <input type="text" class="form-control" value="<?php echo $row->u_phone;?>" id="exampleInputEmail1" name="u_phone">
+                <input type="text" placeholder="Enter Contact Number" class="form-control" value="<?php echo $row->u_phone;?>" id="exampleInputEmail1" name="u_phone">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Address</label>
-                <input type="text" class="form-control" value="<?php echo $row->u_addr;?>" id="exampleInputEmail1" name="u_addr">
+                <input type="text" placeholder="Enter Address Here" class="form-control" value="<?php echo $row->u_addr;?>" id="exampleInputEmail1" name="u_addr">
             </div>
 
             <div class="form-group" style="display:none">
@@ -111,11 +111,11 @@
             
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input type="email" value="<?php echo $row->u_email;?>" class="form-control" name="u_email"">
+                <input type="email" placeholder="Enter Email Address" value="<?php echo $row->u_email;?>" class="form-control" name="u_email">
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" value="<?php echo $row->u_pwd;?>" name="u_pwd" id="exampleInputPassword1">
+                <input type="password" placeholder="Enter Password" class="form-control" value="<?php echo $row->u_pwd;?>" name="u_pwd" id="exampleInputPassword1">
             </div>
 
             <button type="submit" name="update_user" class="btn btn-success">Update User</button>
@@ -124,9 +124,8 @@
         <?php }?>
         </div>
       </div>
-       
+      
       <hr>
-     
 
       <!-- Sticky Footer -->
       <?php include("vendor/inc/footer.php");?>

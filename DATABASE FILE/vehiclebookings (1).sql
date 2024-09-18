@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2024 at 09:57 PM
+-- Generation Time: Sep 16, 2024 at 05:46 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -123,9 +123,20 @@ CREATE TABLE `tms_user` (
 --
 
 INSERT INTO `tms_user` (`u_id`, `u_fname`, `u_lname`, `u_phone`, `u_addr`, `u_category`, `u_email`, `u_pwd`, `u_car_type`, `u_car_regno`, `u_car_bookdate`, `u_car_book_status`) VALUES
-(20, 'Mohiuddin', 'Islam', '01752437955', 'Malibagh 1st Len', 'User', 'mohiuddin@gmail.com', 'mohi955', '', '', '', ''),
+(20, 'Mohiuddin', 'Islam', '01752437955', 'Malibagh 1st Len', 'User', 'mohiuddin@gmail.com', 'mohi955', 'Nissan', 'CA2077', '2024-09-17', 'Approved'),
 (21, 'Safin', 'Ahmed', '01752437563', 'Basabo', 'Driver', 'arif@gmail.com', 'arif123', '', '', '', ''),
-(22, 'Jamil', 'Ahmed', '01752437545', 'Motizil', 'Driver', 'jamil@gmail.com', 'jamil123', '', '', '', '');
+(22, 'Jamil', 'Ahmed', '01752437545', 'Motizil', 'Driver', 'jamil@gmail.com', 'jamil123', '', '', '', ''),
+(23, 'Karim', 'Mia', '01789632545', 'Rampura', 'Driver', 'karim@gmail.com', 'karim', '', '', '', ''),
+(24, 'Nur', 'Hasan', '01789632458', 'Mirpur', 'Driver', 'nur@gmail.com', 'nur123', '', '', '', ''),
+(25, 'Mahamud', 'Hasan', '01785469324', 'Dhanmondi', 'User', 'mahamud@gmail.com', 'mahamud', '', '', '', ''),
+(26, 'Rafsan', 'Ahmed', '01758943589', 'Rampura', 'User', 'rafsan@gmail.com', 'rafsan', '', '', '', ''),
+(27, 'Saif', 'Jahan Dewana', '01789632545', 'Dhanmondi', 'Driver', 'saif@gmail.com', 'saif123', '', '', '', ''),
+(28, 'ASM', 'Abdullah', '01752437563', 'Khilgao', 'User', 'asm@gmail.com', '123456', '', '', '', ''),
+(29, 'Jamil', 'Hossain', '01752437545', 'Motizil', 'User', 'jamil@gmail.com', '123456', 'Nissan', 'CA2077', '2024-09-18', 'Approved'),
+(30, 'Hasib', 'Mahmud', '01752437955', 'Basabo', 'Driver', 'hasib@gmail.com', '123456', '', '', '', ''),
+(31, 'Jamal', 'Hossain', '01752437589', 'Mirpur', 'Driver', 'jamal@gmail.com', '123456', '', '', '', ''),
+(32, 'Sabuj', 'Hossain', '01752437589', 'Motizil', 'Driver', 'sabuj@gmail.com', '123456', '', '', '', ''),
+(33, 'Mahamudul', 'Rakib', '0175843698', 'Narayangong', 'User', 'rakib@gmail.com', 'rakib123', 'Nissan', 'CA2077', '2024-09-20', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -149,12 +160,16 @@ CREATE TABLE `tms_vehicle` (
 --
 
 INSERT INTO `tms_vehicle` (`v_id`, `v_name`, `v_reg_no`, `v_pass_no`, `v_driver`, `v_category`, `v_dpic`, `v_status`) VALUES
-(4, 'Honda Accord', 'CA2077', '5', 'Joseph Yung', 'Sedan', '2019_honda_accord_angularfront.jpg', 'Booked'),
+(4, 'Honda Accord', 'CA2077', '5', 'Joseph Yung', 'AXS', '2019_honda_accord_angularfront.jpg', 'Available'),
 (5, 'Volkswagen Passat', 'CA1690', '5', 'Jesse Robinson', 'Sedan', 'volkswagen-passat-500.jpg', 'Available'),
-(6, 'Nissan Rogue', 'CA1001', '7', 'Demo User', 'SUV', 'Nissan_Rogue_SV_2021.jpg', 'Available'),
+(6, 'Nissan Rogue', 'CA1001', '7', 'Demo User', 'AXS', 'Nissan_Rogue_SV_2021.jpg', 'Booked'),
 (7, 'Subaru Legacy', 'CA7700', '5', 'John Settles', 'Matatu', 'Subaru_Legacy_Premium_2022_2.jpg', 'Booked'),
 (13, 'Toyota', 'AC75007', '8', 'Safin Ahmed', 'Land Cruiser', 'toyta1.jpg', 'Available'),
-(14, 'Toyota', 'AC15007', '5', 'Safin Ahmed', 'Corolla', 'toyta3.jpg', 'Available');
+(14, 'Toyota', 'AC15007', '5', 'Safin Ahmed', 'Corolla', 'toyta3.jpg', 'Available'),
+(15, 'Tata-Harrier-EV', 'GH4560214', '5', 'Nur Hasan', 'CR-V', 'Tata-Harrier-EV.jpg', 'Available'),
+(16, 'Nissan', 'GH45678914', '5', 'Karim Mia', 'X-Pander', 'mitsubeshi_xpander.jpg', 'Available'),
+(17, 'Mitsubishi', 'AD456789', '5', 'Nur Hasan', 'X-Pander', 'mitsubeshi.jpeg', 'Available'),
+(18, 'Mitsubishi', 'ASF457896', '5', 'Karim Mia', 'AXS', 'mitsubeshi_asx.webp', 'Available');
 
 --
 -- Indexes for dumped tables
@@ -228,13 +243,13 @@ ALTER TABLE `tms_syslogs`
 -- AUTO_INCREMENT for table `tms_user`
 --
 ALTER TABLE `tms_user`
-  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `tms_vehicle`
 --
 ALTER TABLE `tms_vehicle`
-  MODIFY `v_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `v_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

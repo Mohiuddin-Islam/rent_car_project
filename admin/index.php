@@ -11,11 +11,11 @@
       $stmt->execute();//execute bind
       $stmt -> bind_result($a_email,$a_pwd,$a_id);//bind result
       $rs=$stmt->fetch();
-      $_SESSION['a_id']=$a_id;//assaign session to admin id
+      $_SESSION['a_id']=$a_id;//assign session to admin id
       //$uip=$_SERVER['REMOTE_ADDR'];
       //$ldate=date('d/m/Y h:i:s', time());
       if($rs)
-      {//if its sucessfull
+      {//if its successfully
         header("location:admin-dashboard.php");
       }
 

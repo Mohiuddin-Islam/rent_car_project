@@ -62,8 +62,7 @@
       <div class="col-lg-4 mb-4">
         <h3>Contact Details</h3>
         <p>
-          54 
-          <br>Inner Circular-Road,
+          <br>54, Inner Circular-Road,
           Purana Paltan, Scout Market
           <br>
         </p>
