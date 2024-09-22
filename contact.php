@@ -23,39 +23,57 @@
     </ol>
 
     <!-- Content Row -->
+    
+  <?php 
+  require_once "config.php";
+  if(isset($_POST['submit'])){
+    extract($_POST);
+
+    $sql = "INSERT INTO tms_contact (fname,phone,email,message) VALUES ('$fname','$phone','$email','$message')";
+
+    $insert = mysqli_query($mysqli,$sql);
+    if($insert){
+      echo "<h3 style= 'color:green'>Thank You for Contact Us</h3>";
+    }
+  }
+  
+  ?>
+
+
+
     <div class="row">
       <!-- Map Column -->
       <div class="col-lg-8 mb-4">
         <h3>Send us a Message</h3>
-        <form name="sentMessage" id="contactForm" novalidate>
+        <form name="sentMessage" novalidate method="post">
           <div class="control-group form-group">
             <div class="controls">
               <label>Full Name:</label>
-              <input type="text" class="form-control" placeholder="Enter Your Name" id="name" required data-validation-required-message="Please enter your name.">
+              <input type="text" class="form-control" name="fname" placeholder="Enter Your Name" id="name" required data-validation-required-message="Please enter your name.">
               <p class="help-block"></p>
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Phone Number:</label>
-              <input type="tel" class="form-control" placeholder="Enter Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
+              <input type="tel" class="form-control" name="phone" placeholder="Enter Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Email Address:</label>
-              <input type="email" class="form-control" id="email" placeholder="Enter Email Address" required data-validation-required-message="Please enter your email address.">
+              <input type="email" class="form-control" name="email" id="email" placeholder="Enter Email Address" required data-validation-required-message="Please enter your email address.">
             </div>
           </div>
           <div class="control-group form-group">
             <div class="controls">
               <label>Message:</label>
-              <textarea rows="10" cols="100" class="form-control" placeholder="Enter Message Here" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
+              <textarea rows="10" cols="100" name="message" class="form-control" placeholder="Enter Message Here" id="message" required data-validation-required-message="Please enter your message" maxlength="999" style="resize:none"></textarea>
             </div>
           </div>
           <div id="success"></div>
           <!-- For success/fail messages -->
-          <button type="submit" class="btn btn-success" id="sendMessageButton">Send Message</button>
+          <button type="submit" class="btn btn-success" name="submit" >Send Message</button>
         </form>
       </div>
       <!-- Contact Details Column -->
@@ -77,7 +95,7 @@
         <p>
           <span title="Hours">H</span>: Sunday to Friday: 9:00 AM to 8:00 PM
         </p>
-      </div>
+      
     </div>
     <!-- /.row -->
 
