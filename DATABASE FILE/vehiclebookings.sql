@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 16, 2024 at 05:46 PM
+-- Generation Time: Sep 22, 2024 at 08:20 AM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -123,7 +123,7 @@ CREATE TABLE `tms_user` (
 --
 
 INSERT INTO `tms_user` (`u_id`, `u_fname`, `u_lname`, `u_phone`, `u_addr`, `u_category`, `u_email`, `u_pwd`, `u_car_type`, `u_car_regno`, `u_car_bookdate`, `u_car_book_status`) VALUES
-(20, 'Mohiuddin', 'Islam', '01752437955', 'Malibagh 1st Len', 'User', 'mohiuddin@gmail.com', 'mohi955', 'Nissan', 'CA2077', '2024-09-17', 'Approved'),
+(20, 'Mohiuddin', 'Islam', '01752437955', 'Malibagh 1st Len', 'User', 'mohiuddin@gmail.com', 'mohi955', 'AXS', 'CA2077', '2024-09-21', 'Approved'),
 (21, 'Safin', 'Ahmed', '01752437563', 'Basabo', 'Driver', 'arif@gmail.com', 'arif123', '', '', '', ''),
 (22, 'Jamil', 'Ahmed', '01752437545', 'Motizil', 'Driver', 'jamil@gmail.com', 'jamil123', '', '', '', ''),
 (23, 'Karim', 'Mia', '01789632545', 'Rampura', 'Driver', 'karim@gmail.com', 'karim', '', '', '', ''),
@@ -131,12 +131,16 @@ INSERT INTO `tms_user` (`u_id`, `u_fname`, `u_lname`, `u_phone`, `u_addr`, `u_ca
 (25, 'Mahamud', 'Hasan', '01785469324', 'Dhanmondi', 'User', 'mahamud@gmail.com', 'mahamud', '', '', '', ''),
 (26, 'Rafsan', 'Ahmed', '01758943589', 'Rampura', 'User', 'rafsan@gmail.com', 'rafsan', '', '', '', ''),
 (27, 'Saif', 'Jahan Dewana', '01789632545', 'Dhanmondi', 'Driver', 'saif@gmail.com', 'saif123', '', '', '', ''),
-(28, 'ASM', 'Abdullah', '01752437563', 'Khilgao', 'User', 'asm@gmail.com', '123456', '', '', '', ''),
+(28, 'ASM', 'Abdullah', '01752437563', 'Khilgao', 'User', 'asm@gmail.com', '123456', 'CR-V', 'GH4560214', '2024-09-25', 'Approved'),
 (29, 'Jamil', 'Hossain', '01752437545', 'Motizil', 'User', 'jamil@gmail.com', '123456', 'Nissan', 'CA2077', '2024-09-18', 'Approved'),
 (30, 'Hasib', 'Mahmud', '01752437955', 'Basabo', 'Driver', 'hasib@gmail.com', '123456', '', '', '', ''),
-(31, 'Jamal', 'Hossain', '01752437589', 'Mirpur', 'Driver', 'jamal@gmail.com', '123456', '', '', '', ''),
+(31, 'Jamal', 'Hossain', '01752437589', 'Mirpur', 'Driver', 'jamal@gmail.com', '123456', 'Corolla', 'AC15007', '2024-09-23', 'Approved'),
 (32, 'Sabuj', 'Hossain', '01752437589', 'Motizil', 'Driver', 'sabuj@gmail.com', '123456', '', '', '', ''),
-(33, 'Mahamudul', 'Rakib', '0175843698', 'Narayangong', 'User', 'rakib@gmail.com', 'rakib123', 'Nissan', 'CA2077', '2024-09-20', 'Approved');
+(33, 'Mahamudul', 'Rakib', '0175843698', 'Narayangong', 'User', 'rakib@gmail.com', 'rakib123', 'Nissan', 'CA2077', '2024-09-20', 'Approved'),
+(34, 'Abir', 'Hasan', '01278585656', 'Savar', 'User', 'abir@gmail.com', '123456', 'AXS', 'CA2077', '2024-09-22', 'Approved'),
+(35, 'Jamal', 'Hossain', '01727858565', 'Siddiq Bazare', 'User', 'jamal@gmail.com', '123456', 'AXS', 'CA2077', '2024-09-23', 'Approved'),
+(36, 'ASM', 'Abdullah', '0175894562', 'Malibagh', 'User', 'asm@gmail.com', '123456', '', '', '', ''),
+(37, 'Safin', 'Ahmed', '01785694567', 'Rampura', 'User', 'safin@gmail.com', '123456', 'AXS', 'CA2077', '2024-09-23', 'Approved');
 
 -- --------------------------------------------------------
 
@@ -162,8 +166,8 @@ CREATE TABLE `tms_vehicle` (
 INSERT INTO `tms_vehicle` (`v_id`, `v_name`, `v_reg_no`, `v_pass_no`, `v_driver`, `v_category`, `v_dpic`, `v_status`) VALUES
 (4, 'Honda Accord', 'CA2077', '5', 'Joseph Yung', 'AXS', '2019_honda_accord_angularfront.jpg', 'Available'),
 (5, 'Volkswagen Passat', 'CA1690', '5', 'Jesse Robinson', 'Sedan', 'volkswagen-passat-500.jpg', 'Available'),
-(6, 'Nissan Rogue', 'CA1001', '7', 'Demo User', 'AXS', 'Nissan_Rogue_SV_2021.jpg', 'Booked'),
-(7, 'Subaru Legacy', 'CA7700', '5', 'John Settles', 'Matatu', 'Subaru_Legacy_Premium_2022_2.jpg', 'Booked'),
+(6, 'Nissan Rogue', 'CA1001', '7', 'Karim', 'AXS', 'Nissan_Rogue_SV_2021.jpg', 'Available'),
+(7, 'Subaru Legacy', 'CA7700', '5', 'Fahad Hasan', 'Matatu', 'Subaru_Legacy_Premium_2022_2.jpg', 'Booked'),
 (13, 'Toyota', 'AC75007', '8', 'Safin Ahmed', 'Land Cruiser', 'toyta1.jpg', 'Available'),
 (14, 'Toyota', 'AC15007', '5', 'Safin Ahmed', 'Corolla', 'toyta3.jpg', 'Available'),
 (15, 'Tata-Harrier-EV', 'GH4560214', '5', 'Nur Hasan', 'CR-V', 'Tata-Harrier-EV.jpg', 'Available'),
@@ -243,7 +247,7 @@ ALTER TABLE `tms_syslogs`
 -- AUTO_INCREMENT for table `tms_user`
 --
 ALTER TABLE `tms_user`
-  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
+  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `tms_vehicle`

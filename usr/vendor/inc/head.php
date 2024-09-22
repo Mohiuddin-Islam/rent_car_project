@@ -6,7 +6,7 @@
   <meta name="description" content="Vehicle Booking System Transport Saccos, Matatu Industry">
   <meta name="author" content="MartDevelopers">
 
-  <title>Vehicle Booking System - User| Client Dashboard</title>
+  <title>Client Dashboard</title>
 
   <!-- Custom fonts for this template-->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
