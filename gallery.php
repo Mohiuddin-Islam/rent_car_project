@@ -53,6 +53,7 @@
           <li class="list-group-item"><?php echo $row->v_pass_no ;?></li>
           <li class="list-group-item"><span class="badge badge-success">Available</span></li>
           <li class="list-group-item"><?php echo $row->v_reg_no;?></li>
+          <li class="list-group-item">$<?php echo $row->v_price;?></li>
         </ul><br>
         <a class="btn btn-success" href="usr/">RENT VEHICLE
           <span class="glyphicon glyphicon-chevron-right"></span>

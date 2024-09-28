@@ -10,7 +10,8 @@
           extract($_POST);
             $v_dpic=$_FILES["v_dpic"]["name"];
 		        move_uploaded_file($_FILES["v_dpic"]["tmp_name"],"../vendor/img/".$_FILES["v_dpic"]["name"]);
-            $query="INSERT INTO tms_vehicle (v_name, v_pass_no, v_reg_no, v_driver, v_category, v_dpic, v_status ) values('$v_name','$v_pass_no','$v_reg_no','$v_driver','$v_category','$v_dpic','$v_status')";
+
+            $query="INSERT INTO tms_vehicle (v_name, v_pass_no, v_reg_no, v_driver, v_category, v_dpic,v_price, v_status ) values('$v_name','$v_pass_no','$v_reg_no','$v_driver','$v_category','$v_dpic','$v_price','$v_status')";
             $insert = mysqli_query($mysqli,$query);
                 if($insert){
                     $succ = "Vehicle Added";
@@ -130,6 +131,12 @@
                 <option>Available</option>
                 
               </select>
+            </div>
+
+            
+            <div class="form-group">
+                <label for="exampleInputEmail1">Vehicle Price</label>
+                <input type="text" placeholder="Enter Price" class="form-control" id="exampleInputEmail1" name="v_price">
             </div>
 
             <div class="form-group col-md-12">

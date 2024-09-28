@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 22, 2024 at 07:35 PM
+-- Generation Time: Sep 26, 2024 at 08:35 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 7.4.33
 
@@ -61,7 +61,8 @@ CREATE TABLE `tms_contact` (
 
 INSERT INTO `tms_contact` (`id`, `fname`, `phone`, `email`, `message`) VALUES
 (6, 'Abdullah', '0175984562', 'asm@gmail.com', 'Good'),
-(8, 'Rakib', '0175895465', 'rakib@gmail.com', 'Service is very good');
+(8, 'Rakib', '0175895465', 'rakib@gmail.com', 'Service is very good'),
+(10, 'Abir', '01758945635', 'abir@gmail.com', 'Service is very good');
 
 -- --------------------------------------------------------
 
@@ -156,10 +157,12 @@ INSERT INTO `tms_user` (`u_id`, `u_fname`, `u_lname`, `u_phone`, `u_addr`, `u_ca
 (30, 'Hasib', 'Mahmud', '01752437955', 'Basabo', 'Driver', 'hasib@gmail.com', '123456', '', '', '', ''),
 (31, 'Jamal', 'Hossain', '01752437589', 'Mirpur', 'Driver', 'jamal@gmail.com', '123456', '', '', '', ''),
 (32, 'Sabuj', 'Hossain', '01752437589', 'Motizil', 'Driver', 'sabuj@gmail.com', '123456', '', '', '', ''),
-(34, 'Safiq', 'Ahmed', '01758964562', 'Mohakhali', 'Driver', 'safiq@gmail.com', 'safiq123', '', '', '', ''),
+(34, 'Safiq', 'Ahmed', '01758964562', 'Mohakhali', 'Driver', 'safiq@gmail.com', 'safiq123', 'AXS', 'CA2077', '2024-09-27', 'Pending'),
 (38, 'Jamil', 'Hossain', '01785469324', 'Dhanmondi', 'User', 'jamil@gmail.com', '123456', 'Sedan', 'CA1690', '2024-09-23', 'Approved'),
 (39, 'Asad', 'Ahmed', '0175985436', 'Mirpur', 'User', 'asad@gmail.com', 'asad123', 'CR-V', 'GH4560214', '2024-09-24', 'Approved'),
-(40, 'Fahim', 'Ahmed', '01785698456', 'Badda', 'User', 'fahim@gmail.com', '123456', 'CR-V', 'GH4560214', '2024-09-23', 'Pending');
+(40, 'Fahim', 'Ahmed', '01785698456', 'Badda', 'User', 'fahim@gmail.com', '123456', 'CR-V', 'GH4560214', '2024-09-23', 'Approved'),
+(41, 'Sohan', 'Hossain', '01752437589', 'Rampura', 'User', 'sohan@gmail.com', '123456', 'Sedan', 'CA1690', '2024-09-24', 'Approved'),
+(42, 'Hasan', 'Mahmud', '01752437563', 'Badda', 'User', 'hasan@gmail.com', '123456', 'AXS', 'CA2077', '2024-09-24', 'Pending');
 
 -- --------------------------------------------------------
 
@@ -175,6 +178,7 @@ CREATE TABLE `tms_vehicle` (
   `v_driver` varchar(200) NOT NULL,
   `v_category` varchar(200) NOT NULL,
   `v_dpic` varchar(200) NOT NULL,
+  `v_price` int(11) NOT NULL,
   `v_status` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_swedish_ci;
 
@@ -182,18 +186,21 @@ CREATE TABLE `tms_vehicle` (
 -- Dumping data for table `tms_vehicle`
 --
 
-INSERT INTO `tms_vehicle` (`v_id`, `v_name`, `v_reg_no`, `v_pass_no`, `v_driver`, `v_category`, `v_dpic`, `v_status`) VALUES
-(4, 'Honda Accord', 'CA2077', '5', 'Joseph Yung', 'AXS', '2019_honda_accord_angularfront.jpg', 'Available'),
-(5, 'Volkswagen Passat', 'CA1690', '5', 'Jesse Robinson', 'Sedan', 'volkswagen-passat-500.jpg', 'Available'),
-(6, 'Nissan Rogue', 'CA1001', '7', 'Demo User', 'AXS', 'Nissan_Rogue_SV_2021.jpg', 'Available'),
-(7, 'Subaru Legacy', 'CA7700', '5', 'John Settles', 'AXS', 'Subaru_Legacy_Premium_2022_2.jpg', 'Available'),
-(13, 'Toyota', 'AC75007', '8', 'Safin Ahmed', 'Land Cruiser', 'toyta1.jpg', 'Available'),
-(14, 'Toyota', 'AC15007', '5', 'Safin Ahmed', 'Corolla', 'toyta3.jpg', 'Available'),
-(15, 'Tata-Harrier-EV', 'GH4560214', '5', 'Nur Hasan', 'CR-V', 'Tata-Harrier-EV.jpg', 'Available'),
-(16, 'Nissan', 'GH45678914', '5', 'Karim Mia', 'X-Pander', 'mitsubeshi_xpander.jpg', 'Available'),
-(17, 'Mitsubishi', 'AD456789', '5', 'Nur Hasan', 'X-Pander', 'mitsubeshi.jpeg', 'Available'),
-(18, 'Mitsubishi', 'ASF457896', '5', 'Karim Mia', 'AXS', 'mitsubeshi_asx.webp', 'Available'),
-(19, 'Toyota', 'ASF456987', '5', 'Safiq Ahmed', 'Primeo', 'toyta2.jpg', 'Available');
+INSERT INTO `tms_vehicle` (`v_id`, `v_name`, `v_reg_no`, `v_pass_no`, `v_driver`, `v_category`, `v_dpic`, `v_price`, `v_status`) VALUES
+(4, 'Honda Accord', 'CA2077', '5', 'Joseph Yung', 'AXS', '2019_honda_accord_angularfront.jpg', 0, 'Available'),
+(5, 'Volkswagen Passat', 'CA1690', '5', 'Jesse Robinson', 'Sedan', 'volkswagen-passat-500.jpg', 0, 'Available'),
+(6, 'Nissan Rogue', 'CA1001', '7', 'Demo User', 'AXS', 'Nissan_Rogue_SV_2021.jpg', 0, 'Available'),
+(7, 'Subaru Legacy', 'CA7700', '5', 'John Settles', 'AXS', 'Subaru_Legacy_Premium_2022_2.jpg', 0, 'Available'),
+(13, 'Toyota', 'AC75007', '8', 'Safin Ahmed', 'Land Cruiser', 'toyta1.jpg', 0, 'Available'),
+(14, 'Toyota', 'AC15007', '5', 'Safin Ahmed', 'Corolla', 'toyta3.jpg', 0, 'Available'),
+(15, 'Tata-Harrier-EV', 'GH4560214', '5', 'Nur Hasan', 'CR-V', 'Tata-Harrier-EV.jpg', 0, 'Available'),
+(16, 'Nissan', 'GH45678914', '5', 'Karim Mia', 'X-Pander', 'mitsubeshi_xpander.jpg', 0, 'Available'),
+(17, 'Mitsubishi', 'AD456789', '5', 'Nur Hasan', 'X-Pander', 'mitsubeshi.jpeg', 0, 'Available'),
+(18, 'Mitsubishi', 'ASF457896', '5', 'Karim Mia', 'AXS', 'mitsubeshi_asx.webp', 0, 'Available'),
+(19, 'Toyota', 'ASF456987', '5', 'Safiq Ahmed', 'Primeo', 'toyta2.jpg', 0, 'Available'),
+(20, 'Tesla', 'ACF85698', '5', 'John', 'Volvo', '', 2000, 'Avaiable'),
+(21, 'Lamburgini', 'ABD4569', '5', 'Jamil Ahmed', 'Hybrid', 'AUDI Image5.jpg.jpg', 0, 'Available'),
+(22, 'Ferari', 'ACF4568', '5', 'Hasib Mahmud', 'Sedan', 'AUDI Image6.jpg.jpg', 1500, 'Available');
 
 --
 -- Indexes for dumped tables
@@ -255,7 +262,7 @@ ALTER TABLE `tms_admin`
 -- AUTO_INCREMENT for table `tms_contact`
 --
 ALTER TABLE `tms_contact`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `tms_feedback`
@@ -279,13 +286,13 @@ ALTER TABLE `tms_syslogs`
 -- AUTO_INCREMENT for table `tms_user`
 --
 ALTER TABLE `tms_user`
-  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `u_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `tms_vehicle`
 --
 ALTER TABLE `tms_vehicle`
-  MODIFY `v_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `v_id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -53,6 +53,7 @@
                     <th>Reg No.</th>
                     <th>Seats</th>
                     <th>Driver</th>
+                    <th>Price</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -74,6 +75,7 @@
                     <td><?php echo $row->v_reg_no;?></td>
                     <td><?php echo $row->v_pass_no;?> Passengers</td>
                     <td><?php echo $row->v_driver;?></td>
+                    <td><?php echo $row->v_price;?></td>
                     <td>
                       <a href="user-confirm-booking.php?v_id=<?php echo $row->v_id;?>" class = "btn btn-outline-success"><i class ="fa fa-clipboard"></i> Book Vehicle</a>
                     </td>

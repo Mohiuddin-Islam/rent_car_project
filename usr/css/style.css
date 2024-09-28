@@ -1,0 +1,31 @@
+label{
+	color: white;
+}
+.text-danger {
+	color:red;
+	font-size:15px;
+}
+
+.container{
+    padding-top:50px;
+
+
+}
+
+.form-control{
+	border:solid 2px #2196F3;
+}
+
+
+
+
+.text-danger{
+	color:red;
+    font-size:15px;
+}
+
+
+#status{
+    color:red;
+    padding-top:5px;
+}
