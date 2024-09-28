@@ -107,6 +107,7 @@
                 <label for="exampleInputEmail1">Vehicle Registration Number</label>
                 <input type="email" value="<?php echo $row->v_reg_no;?>" readonly class="form-control" name="u_car_regno">
             </div>
+
             <div class="form-group">
                 <label for="exampleInputEmail1">Booking Date</label>
                 <input type="date" class="form-control" id="exampleInputEmail1"  name="u_car_bookdate">

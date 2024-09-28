@@ -79,17 +79,17 @@
     <div class="row">
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="vendor/img/audi3.jpg" alt="" height="200px"></a>
+          <a href="#"><img class="card-img-top" src="vendor/img/Tata-Harrier-EV.png" alt="" height="200px"></a>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="vendor/img/hondacvr.jpg" alt="" height="200px"></a>
+          <a href="#"><img class="card-img-top" src="vendor/img/mitsubeshi_xpander.png" alt="" height="200px"></a>
         </div>
       </div>
       <div class="col-lg-4 col-sm-6 portfolio-item">
         <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="vendor/img/toyota.jpg" alt="" height="200px"></a>
+          <a href="#"><img class="card-img-top" src="vendor/img/Nissan_Rogue_SV.png" alt="" height="200px"></a>
         </div>
       </div>
       

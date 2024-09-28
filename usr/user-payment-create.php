@@ -3,23 +3,32 @@
   include('vendor/inc/config.php');
   include('vendor/inc/checklogin.php');
   check_login();
-  $aid=$_SESSION['a_id'];
-  //Add USer
+  $aid=$_SESSION['u_id'];
+  //Add Booking
 
-  $aid=$_GET['v_id'];
-  if(isset($_POST['upate_veh'])){
-          extract($_POST);
-            $v_dpic=$_FILES["v_dpic"]["name"];
-            move_uploaded_file($_FILES["v_dpic"]["tmp_name"],"../vendor/img/".$_FILES["v_dpic"]["name"]);
-            $query="UPDATE tms_vehicle SET v_name='$v_name', v_reg_no='$v_reg_no', v_driver='$v_driver', v_category='$v_category', v_dpic='$v_dpic', v_status='$v_status' where v_id = '$aid'";
+$id = $_REQUEST['v_id'];
 
-          $update = mysqli_query($mysqli,$query);
-                if($update){
-                    $succ = "Vehicle Updated";
-                } else {
+  if(isset($_POST['book_vehicle']))
+
+    {
+        extract($_POST);
+        $sql = "UPDATE tms_vehicle SET v_price = '$v_price', start_date = '$start_date', last_date = '$last_date' WHERE v_id = '$id'";
+
+        $stmt = mysqli_query($mysqli,$sql);
+
+            
+                if($stmt)
+                {
+                    $succ = "Booking Submitted";
+                }
+                else 
+                {
                     $err = "Please Try Again Later";
                 }
             }
+
+            $sql1 = $mysqli->query("SELECT * FROM tms_vehicle WHERE v_id = '$id'");
+            $row = $sql1->fetch_assoc();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,7 +36,7 @@
 <?php include('vendor/inc/head.php');?>
 
 <body id="page-top">
-  <!--Start Navigation Bar-->
+ <!--Start Navigation Bar-->
   <?php include("vendor/inc/nav.php");?>
   <!--Navigation Bar-->
 
@@ -65,84 +74,46 @@
         <!-- Breadcrumbs-->
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="#">Vehicles</a>
+            <a href="user-dashboard.php">Dashboard</a>
           </li>
-          <li class="breadcrumb-item active">Update Vehicle</li>
+          <li class="breadcrumb-item">Vehicle</li>
+          <li class="breadcrumb-item ">Book Vehicle</li>
+          <li class="breadcrumb-item active">Confirm Booking</li>
         </ol>
         <hr>
         <div class="card">
         <div class="card-header">
-            Update Vehicle
+          Confirm Booking
         </div>
         <div class="card-body">
           <!--Add User Form-->
-          <?php
-            
-            $res=$mysqli->query("SELECT * FROM tms_vehicle where v_id='$aid'");
-            
-            
-            while($row=$res->fetch_object())
-        {
-        ?>
-          <form method ="POST" enctype="multipart/form-data"> 
-            <div class="form-group">
-                <label for="exampleInputEmail1">Vehicle Name</label>
-                <input type="text" value="<?php echo $row->v_name;?>" required class="form-control" id="exampleInputEmail1" name="v_name">
+          
+          <form method ="POST"> 
+          <div class="form-group">
+                <label for="exampleInputEmail1">Vehicle Price</label>
+                <input type="text" value="<?php echo $row['v_price'];?>" readonly class="form-control" name="v_price">
             </div>
             <div class="form-group">
-                <label for="exampleInputEmail1">Vehicle Registration Number</label>
-                <input type="text" value="<?php echo $row->v_reg_no;?>" class="form-control" id="exampleInputEmail1" name="v_reg_no">
+                <label for="exampleInputEmail1">Booking Start Date</label>
+                <input type="date" readonly class="form-control" name="start_date">
             </div>
 
             <div class="form-group">
-                <label for="exampleInputEmail1">Driver</label>
-                <input type="text" value="<?php echo $row->v_driver;?>" class="form-control" id="exampleInputEmail1" name="v_driver">
+                <label for="exampleInputEmail1">Booking Last Date</label>
+                <input type="date" class="form-control" id="exampleInputEmail1"  name="last_date">
             </div>
-            
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Vehicle Category</label>
-              <select class="form-control" name="v_category" id="exampleFormControlSelect1">
-              <option>Premio</option>
-                <option>Sedan</option>
-                <option>SUV</option>
-                <option>AXS</option>
-                <option>Land Cruiser</option>
-                <option>Hybrid</option>
-                <option>Audi-R8</option>
-                <option>Corolla</option>
-                <option>Harrier-EV</option>
-                <option>Petrol</option>
-                <option>X-Pander</option>
-                <option>Rogue-SV</option>
-                <option>BMW-X8</option>
-                <option>CV-R</option>
-
-              </select>
+            <div class="form-group" style="display:none">
+                <label for="exampleInputEmail1">Book Status</label>
+                <input type="text" value="Pending" class="form-control" id="exampleInputEmail1"  name="u_car_book_status">
             </div>
-
-            <div class="form-group">
-              <label for="exampleFormControlSelect1">Vehicle Status</label>
-              <select class="form-control" name="v_status" id="exampleFormControlSelect1">
-                <option>Booked</option>
-                <option>Available</option>
-              </select>
-            </div>
-
-            <div class="card form-group" style="width: 30rem">
-            <img src="../vendor/img/<?php echo $row->v_dpic;?>" class="card-img-top" >
-            <div class="card-body">
-                <h5 class="card-title">Vehicle Picture</h5>
-                <input type="file" class="btn btn-success" id="exampleInputEmail1" name="v_dpic">
-            </div>
-            </div>
-            <hr>
-            <button type="submit" name="upate_veh" class="btn btn-success">Update Vehicle</button>
+  
+            <button type="submit" name="book_vehicle" class="btn btn-success">Confirm Booking</button>
           </form>
           <!-- End Form-->
-          <?php }?>
+       
         </div>
       </div>
-      
+       
       <hr>
      
 

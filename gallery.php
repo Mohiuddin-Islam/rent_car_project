@@ -32,7 +32,7 @@
     </ol>
     <?php
 
-      $res="SELECT * FROM tms_vehicle  ORDER BY RAND() LIMIT 10 "; //get all feedbacks
+      $res="SELECT * FROM tms_vehicle  ORDER BY RAND() LIMIT 15 "; //get all feedbacks
       $sql= $mysqli->query($res) ;
     
       $cnt=1;

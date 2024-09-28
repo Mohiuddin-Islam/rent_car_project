@@ -7,18 +7,22 @@
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<?php include("vendor/inc/head.php");?>
+
+<!--Head-->
+<?php include ('vendor/inc/head.php');?>
+<!--End Head-->
 
 <body id="page-top">
- <!--Start Navigation Bar-->
-  <?php include("vendor/inc/nav.php");?>
-  <!--Navigation Bar-->
+<!--Navbar-->
+  <?php include ('vendor/inc/nav.php');?>
+<!--End Navbar-->  
 
   <div id="wrapper">
 
     <!-- Sidebar -->
-    <?php include("vendor/inc/sidebar.php");?>
+    <?php include('vendor/inc/sidebar.php');?>
     <!--End Sidebar-->
+
     <div id="content-wrapper">
 
       <div class="container-fluid">
@@ -28,51 +32,56 @@
           <li class="breadcrumb-item">
             <a href="user-dashboard.php">Dashboard</a>
           </li>
-          <li class="breadcrumb-item">Booking</li>
-          <li class="breadcrumb-item ">View My Booking</li>
+          <li class="breadcrumb-item">Vehicle</li>
+          <li class="breadcrumb-item active">Book Vehicle</li>
+
         </ol>
 
-        <!-- My Bookings-->
-        <div class="card mb-3">
+      
+      <!--Bookings-->
+      <div class="card mb-3">
           <div class="card-header">
-            <i class="fas fa-table"></i>
-            Bookings</div>
+            <i class="fas fa-bus"></i>
+            Available Vehicles</div>
           <div class="card-body">
             <div class="table-responsive">
               <table class="table table-bordered table-striped table-hover" id="dataTable" width="100%" cellspacing="0">
                 <thead>
                   <tr>
-                    <th>Name</th>
-                    <th>Phone</th>
-                    <th>Vehicle Type</th>
+                    <th>#</th>
+                    <th>Vehicle Name</th>
                     <th>Reg No.</th>
-                    <th>Booking date</th>
-                    <th>Status</th>
+                    <th>Seats</th>
+                    <th>Driver</th>
+                    <th>Price</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 
                 <tbody>
                 <?php
-                    $aid=$_SESSION['u_id'];
-                    $ret="SELECT * from tms_user where u_id=? ";
-                    $stmt= $mysqli->prepare($ret) ;
-                    $stmt->bind_param('i',$aid);
-                    $stmt->execute() ;//ok
-                    $res=$stmt->get_result();
-                    //$cnt=1;
-                        while($row=$res->fetch_object())
-                        {
+
+                  $ret="SELECT * FROM tms_vehicle  where   v_status ='Available' "; //get all bookings
+                  $stmt= $mysqli->prepare($ret) ;
+                  $stmt->execute() ;//ok
+                  $res=$stmt->get_result();
+                  $cnt=1;
+                  while($row=$res->fetch_object())
+                {
                 ?>
                   <tr>
-                    <td><?php echo $row->u_fname;?> <?php echo $row->u_lname;?></td>
-                    <td><?php echo $row->u_phone;?></td>
-                    <td><?php echo $row->u_car_type;?></td>
-                    <td><?php echo $row->u_car_regno;?></td>
-                    <td><?php echo $row->u_car_bookdate;?></td>
-                    <td><?php if($row->u_car_book_status == "Pending"){ echo '<span class = "badge badge-warning">'.$row->u_car_book_status.'</span>'; } else { echo '<span class = "badge badge-success">'.$row->u_car_book_status.'</span>';}?></td>
+                    <td><?php echo $cnt;?></td>
+                    <td><?php echo $row->v_name;?></td>
+                    <td><?php echo $row->v_reg_no;?></td>
+                    <td><?php echo $row->v_pass_no;?> Passengers</td>
+                    <td><?php echo $row->v_driver;?></td>
+                    <td><?php echo $row->v_price;?></td>
+                    <td>
+                      <a href="user-payment-create.php?v_id=<?php echo $row->v_id;?>" class = "btn btn-outline-success"><i class ="fa fa-clipboard"></i> Book Vehicle</a>
+                    </td>
                   </tr>
-
-                <?php  }?>
+                  <?php  $cnt = $cnt +1; }?>
+                  
                 </tbody>
               </table>
             </div>
@@ -80,11 +89,11 @@
           <div class="card-footer small text-muted">
             <?php
               date_default_timezone_set("Africa/Nairobi");
-              echo "Generated:" . date("h:i:sa");
+              echo "Generated At : " . date("h:i:sa");
             ?> 
         </div>
         </div>
-        
+
       </div>
       <!-- /.container-fluid -->
 
