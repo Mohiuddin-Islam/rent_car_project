@@ -88,10 +88,10 @@ $id = $_REQUEST['v_id'];
         <div class="card-body">
           <!--Add User Form-->
           
-          <form method ="POST"> 
+          <form method ="post"> 
           <div class="form-group">
                 <label for="exampleInputEmail1">Vehicle Price</label>
-                <input type="text" value="<?php echo $row['v_price'];?>" readonly class="form-control" name="v_price">
+                <input type="number" value="<?php echo $row['v_price'];?>"  class="form-control" name="v_price">
             </div>
             <div class="form-group">
                 <label for="exampleInputEmail1">Booking Start Date</label>
